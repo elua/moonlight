@@ -1,0 +1,1 @@
+Open the schematics (.sch files) with the free version of CadSoft Eagle 5.10.0 (www.cadsoftusa.com)

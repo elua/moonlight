@@ -1,0 +1,234 @@
+; .\delay.SRC generated from: delay.c
+; COMPILER INVOKED BY:
+;        C:\software\Keil\C51\BIN\C51.EXE delay.c LARGE OMF2 BROWSE INCDIR(..\eLua\inc;..\eLua\inc\wiznet) DEBUG CODE SYMBOLS TABS(2) SRC(.\delay.SRC)
+
+
+NAME	DELAY
+
+?PR?_wait_1us?DELAY  SEGMENT CODE 
+?XD?_wait_1us?DELAY  SEGMENT XDATA OVERLAYABLE
+?PR?_wait_1ms?DELAY  SEGMENT CODE 
+?XD?_wait_1ms?DELAY  SEGMENT XDATA OVERLAYABLE
+?PR?_wait_10ms?DELAY SEGMENT CODE 
+?XD?_wait_10ms?DELAY SEGMENT XDATA OVERLAYABLE
+	PUBLIC	_wait_10ms
+	PUBLIC	_wait_1ms
+	PUBLIC	_wait_1us
+
+	RSEG  ?XD?_wait_1ms?DELAY
+?_wait_1ms?BYTE:
+        cnt?142:   DS   2
+	ORG  2
+          i?143:   DS   2
+
+	RSEG  ?XD?_wait_1us?DELAY
+?_wait_1us?BYTE:
+        cnt?040:   DS   2
+	ORG  2
+          i?041:   DS   2
+
+	RSEG  ?XD?_wait_10ms?DELAY
+?_wait_10ms?BYTE:
+        cnt?244:   DS   2
+	ORG  2
+          i?245:   DS   2
+; 
+; #include "delay.h"
+; 
+; void wait_1us(unsigned int cnt)
+
+	RSEG  ?PR?_wait_1us?DELAY
+_wait_1us:
+	USING	0
+			; SOURCE LINE # 4
+	MOV  	DPTR,#cnt?040
+	MOV  	A,R6
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+; {
+			; SOURCE LINE # 5
+; 	volatile unsigned int i;
+; 	
+; 	for(i = 0; i<cnt; i++) {
+			; SOURCE LINE # 8
+	CLR  	A
+	INC  	DPTR
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOVX 	@DPTR,A
+?C0001:
+	MOV  	DPTR,#cnt?040
+	MOVX 	A,@DPTR
+	MOV  	R6,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R7,A
+	CLR  	C
+	MOV  	DPTR,#i?041+01H
+	MOVX 	A,@DPTR
+	SUBB 	A,R7
+	MOV  	DPTR,#i?041
+	MOVX 	A,@DPTR
+	SUBB 	A,R6
+	JNC  	?C0004
+; #pragma ASM
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; #pragma ENDASM
+; 		}
+			; SOURCE LINE # 21
+	MOV  	DPTR,#i?041+01H
+	MOVX 	A,@DPTR
+	INC  	A
+	MOVX 	@DPTR,A
+	JNZ  	?C0001
+	MOV  	DPTR,#i?041
+	MOVX 	A,@DPTR
+	INC  	A
+	MOVX 	@DPTR,A
+?C0013:
+	SJMP 	?C0001
+; }
+			; SOURCE LINE # 22
+?C0004:
+	RET  	
+; END OF _wait_1us
+
+; 
+; void wait_1ms(unsigned int cnt)
+
+	RSEG  ?PR?_wait_1ms?DELAY
+_wait_1ms:
+	USING	0
+			; SOURCE LINE # 24
+	MOV  	DPTR,#cnt?142
+	MOV  	A,R6
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+; {
+			; SOURCE LINE # 25
+; 	volatile unsigned int i;
+; 
+; 	for (i = 0; i < cnt; i++) wait_1us(1000);
+			; SOURCE LINE # 28
+	CLR  	A
+	INC  	DPTR
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOVX 	@DPTR,A
+?C0005:
+	MOV  	DPTR,#cnt?142
+	MOVX 	A,@DPTR
+	MOV  	R6,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R7,A
+	CLR  	C
+	MOV  	DPTR,#i?143+01H
+	MOVX 	A,@DPTR
+	SUBB 	A,R7
+	MOV  	DPTR,#i?143
+	MOVX 	A,@DPTR
+	SUBB 	A,R6
+	JNC  	?C0008
+	MOV  	R7,#0E8H
+	MOV  	R6,#03H
+	LCALL	_wait_1us
+	MOV  	DPTR,#i?143+01H
+	MOVX 	A,@DPTR
+	INC  	A
+	MOVX 	@DPTR,A
+	JNZ  	?C0005
+	MOV  	DPTR,#i?143
+	MOVX 	A,@DPTR
+	INC  	A
+	MOVX 	@DPTR,A
+?C0014:
+	SJMP 	?C0005
+; }
+			; SOURCE LINE # 29
+?C0008:
+	RET  	
+; END OF _wait_1ms
+
+; 
+; void wait_10ms(unsigned int cnt)
+
+	RSEG  ?PR?_wait_10ms?DELAY
+_wait_10ms:
+	USING	0
+			; SOURCE LINE # 31
+	MOV  	DPTR,#cnt?244
+	MOV  	A,R6
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+; {
+			; SOURCE LINE # 32
+; 	volatile unsigned int i;
+; 	for (i = 0; i < cnt; i++) wait_1ms(10);
+			; SOURCE LINE # 34
+	CLR  	A
+	INC  	DPTR
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOVX 	@DPTR,A
+?C0009:
+	MOV  	DPTR,#cnt?244
+	MOVX 	A,@DPTR
+	MOV  	R6,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R7,A
+	CLR  	C
+	MOV  	DPTR,#i?245+01H
+	MOVX 	A,@DPTR
+	SUBB 	A,R7
+	MOV  	DPTR,#i?245
+	MOVX 	A,@DPTR
+	SUBB 	A,R6
+	JNC  	?C0012
+	MOV  	R7,#0AH
+	MOV  	R6,#00H
+	LCALL	_wait_1ms
+	MOV  	DPTR,#i?245+01H
+	MOVX 	A,@DPTR
+	INC  	A
+	MOVX 	@DPTR,A
+	JNZ  	?C0009
+	MOV  	DPTR,#i?245
+	MOVX 	A,@DPTR
+	INC  	A
+	MOVX 	@DPTR,A
+?C0015:
+	SJMP 	?C0009
+; }
+			; SOURCE LINE # 35
+?C0012:
+	RET  	
+; END OF _wait_10ms
+
+	END

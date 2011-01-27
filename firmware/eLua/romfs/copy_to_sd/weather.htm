@@ -1,0 +1,36 @@
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <title>Yahoo! weather client running on Moonlight</title>
+  </head>
+  <body>
+  <h4>Weather client configuration</h4>
+  <form action="app.cgi" name="form1" method="post">
+  <table border = "1" cellpadding="4" cellspacing="0 width="200">
+    <tr>
+      <td width="80">WOEID</td>
+      <td width="120"><input name="woeid" type="text" size="20" value="$00$"></td>
+    </tr>
+    <tr>
+      <td>Units</td>
+      <td>
+        <select name="units">
+          <option value="c" $01$>C</option>
+          <option value="f" $02$>F</option>
+        </select>
+      </td>    
+    </tr> 
+    <tr>
+      <td width="80">Refresh(s)</td>
+      <td width="120"><input name="refresh" type="text" size="20" value="$03$"></td>
+    </tr>       
+  </table><br />
+  <table border="0" cellpadding="1" cellspacing="1">
+  <tr>
+    <td width="100" align="center"><input type="submit" value="Update"></td>
+    <td width="100" align="center"><input type="button" value="Back" onClick="history.go(-1)"></td>    
+  </tr>
+  </table>
+  </form>  
+  </body>
+</html>

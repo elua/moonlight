@@ -1,0 +1,23 @@
+Hello, and welcome to the iMCU Design Contest 2010 entry #003185 (Moonlight).
+The overall structure of the entry is given below:
+
+-- doc - complete documentation (with datasheets, schematics, abstract and full documentation)
+   -- datasheet - datasheets of the different components used by Moonlight
+   -- schematics - the complete schematics of the project
+   abstract.doc - the abstract
+   complete.doc - the complete documentation
+   moonlight.vsd - the overall system diagram
+   moonlight2.png - the PNG version of the overall system diagram
+-- firmware - the complete code
+   -- eLua - the STM32 firmware
+   -- w7100 - the W7100 firmware
+   -- pc_apps - PC applications used by Moonlight
+-- media - Moonlight media files (pictures and a movie). 
+   
+Before you stard reading the documentation, you might want to check the 
+"moonlight.mp4" file in the media/ directory for a nice demo of the capabilities
+of Moonlight.
+The abstract (doc/abstract.doc) and the complete documentatation (doc/complete.doc)
+were created with the Microsoft Office 2007 suite.
+ 
+   

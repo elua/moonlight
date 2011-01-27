@@ -1,0 +1,184 @@
+/*******************************************************************************
+ * Generic styling
+ ******************************************************************************/
+
+body {
+	font-family: tahoma,verdana,arial,helvetica,geneva,sans-serif;
+	background-color: #fff;
+	margin: 0;
+	padding: 0;
+}
+
+pre {
+	border: 1px dashed #fb2;
+	background-color: #fda;
+	font-family: Monotype.com,"Courier New",Courier,monospace;
+	font-size: 90%;
+	line-height: 125%;
+	margin-left: 1em;
+	overflow: auto;
+	padding: 4px;
+}
+
+/*******************************************************************************
+ * Main layout
+ ******************************************************************************/
+
+/* Assume a logo size of 80x80 pixels! */
+
+#logo {
+	background-image: url(images/title_background.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	color: #000;
+	font: bold 150%/100% tahoma, Arial, sans-serif;
+	height: 90px;
+	width: 100%;
+	border-bottom: 0 solid #E7F1FA;
+	margin: 0;
+	padding: 0;
+}
+
+.logo_elua {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+#nav,#menu {
+	float: left;
+	width: 170px;
+	margin-left: 8px;
+	padding-top: 5px;
+}
+
+#content {
+	padding-top: 10px;
+	margin: 0 8px 8px 181px;
+}
+
+/*******************************************************************************
+ * Logo styling
+ ******************************************************************************/
+
+#logo h6 {
+	color: #137096;
+	margin: 2px 4px;
+	padding: 2px;
+}
+
+.header_title {
+	font-size: 36px;
+	color: #0b0c79;
+	font-weight: 700;
+	padding-left: 20px;
+}
+
+h6 {
+	font-size: 10px;
+}
+
+#logo a {
+	text-decoration: none;
+	padding: 2px 4px;
+}
+
+#logo a.lang img {
+	border: 0;
+}
+
+/*******************************************************************************
+ * Content styling
+ ******************************************************************************/
+
+#content p {
+	line-height: 120%;
+	padding-left: 1em;
+}
+
+#content h2 {
+	border: 1px solid gray;
+	background-color: #a0ffa0;
+	font-size: 99%;
+	margin-left: 1em;
+	padding: 4px;
+}
+
+#content h3 {
+	border: 1px solid gray;
+	background-color: #cee7ff;
+	color: #5c5c5c;
+	margin: 0;
+	padding: 5px;
+}
+
+#content table {
+	margin-left: 1em;
+	border-collapse: collapse;
+}
+
+#content p.info {
+	margin-left: 3em;
+}
+
+#content ul {
+	padding-left: 1em;
+	margin-left: 40px;
+}
+
+#content td {
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+#content th {
+	border: 2px solid gray;
+	background-color: silver;
+	padding: 5px;
+}
+
+/*******************************************************************************
+ * Table types
+ ******************************************************************************/
+
+table.invisible {
+	border: 0 solid #000;
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 4px;
+}
+
+table.invisible td {
+	text-align: center;
+	border: 0 solid #000;
+}
+
+/*******************************************************************************
+ * Other styles
+ ******************************************************************************/
+
+.docdiv {
+	padding-left: 1em;
+}
+
+.docdiv pre {
+	margin-left: 0;
+}
+
+.code {
+	border: 0;
+	background-color: #FFF;
+	font-family: "Courier New",Courier,monospace;
+	font-size: 90%;
+	overflow: auto;
+	padding: 4px 4px 4px 1em;
+}
+
+.warning {
+	color: red;
+	font-weight: 700;
+}
+
+#content p.doc,#content ol,#content h4 {
+	margin-left: 2em;
+}
